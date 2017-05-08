@@ -3,6 +3,7 @@ window.onload = function () {
   var slides;
 
   document.getElementById('slides').className = '';
+  document.freeze = false;
 
   slides = document.getElementsByTagName('img');
   document.currentSlide = 0;
@@ -47,6 +48,15 @@ var setupSwitches = function (slides) {
 
 var changeSlide = function (direction, slides) {
   var slideContainer;
+
+  if (document.freeze) {
+    return false;
+  }
+
+  document.freeze = true;
+  setTimeout(function () {
+    document.freeze = false;
+  }, 900);
 
   slideContainer = document.getElementById('slides');
   slideContainer.classList.add('blur');
