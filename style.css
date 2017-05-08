@@ -18,6 +18,7 @@ switch {
   display: block;
   font-size: 80px;
   height: 100px;
+  margin: 16px 0 16px 0;
   width: 100px;
 }
 
