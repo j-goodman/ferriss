@@ -16,6 +16,8 @@ body {
 switches {
   display: flex;
   flex-direction: column;
+  left: 40px;
+  position: absolute;
 }
 
 switch {
@@ -32,6 +34,10 @@ switch:hover {
   color: #bcd;
 }
 
+.hidden {
+  display: none;
+}
+
 slides {
   align-items: center;
   display: flex;
@@ -45,24 +51,26 @@ slides {
 
 slides.blur {
   filter: blur(20px);
+  height: 60%;
+  width: 60%;
 }
 
 slides > img.above {
   transform: translateY(-100vh);
-  transition: transform .8s;
+  transition: transform .8s, height .3s, width .3s;
   z-index: -1;
 }
 
 slides > img.below {
   transform: translateY(100vh);
-  transition: transform .8s;
+  transition: transform .8s, height .3s, width .3s;
   z-index: -1;
 }
 
 slides > img {
-  height: 100%;
+  height: inherit;
   position: absolute;
   transform: translateY(0px);
-  transition: transform .6s;
+  transition: transform .6s, height .3s, width .3s;
   width: auto;
 }

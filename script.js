@@ -2,6 +2,8 @@ window.onload = function () {
   var i;
   var slides;
 
+  document.getElementById('slides').className = '';
+
   slides = document.getElementsByTagName('img');
   document.currentSlide = 0;
   for (i=0 ; i<slides.length ; i++) {
