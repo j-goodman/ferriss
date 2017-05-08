@@ -38,7 +38,7 @@ var setupSwitches = function (slides) {
   };
 
   down.onclick = function () {
-    if (document.currentSlide < slides.length) {
+    if (document.currentSlide < slides.length - 1) {
       changeSlide(1, slides);
     }
 
@@ -46,6 +46,15 @@ var setupSwitches = function (slides) {
 };
 
 var changeSlide = function (direction, slides) {
+  var slideContainer;
+
+  slideContainer = document.getElementById('slides');
+  slideContainer.classList.add('blur');
+
+  setTimeout(function () {
+    this.className = '';
+  }.bind(slideContainer), 600);
+
   document.currentSlide += direction;
   updateSlides(slides, document.currentSlide);
 };

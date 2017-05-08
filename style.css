@@ -39,7 +39,7 @@ slides {
   flex-direction: column;
   height: 80%;
   justify-content: center;
-  transition: blur 1s;
+  transition: filter .3s;
   width: 80%;
 }
 
@@ -58,5 +58,7 @@ slides > img.below {
 slides > img {
   height: 100%;
   position: absolute;
+  transform: translateY(0px);
+  transition: transform .8s;
   width: auto;
 }
