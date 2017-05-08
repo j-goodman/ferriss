@@ -49,16 +49,20 @@ slides.blur {
 
 slides > img.above {
   transform: translateY(-100vh);
+  transition: transform .8s;
+  z-index: -1;
 }
 
 slides > img.below {
   transform: translateY(100vh);
+  transition: transform .8s;
+  z-index: -1;
 }
 
 slides > img {
   height: 100%;
   position: absolute;
   transform: translateY(0px);
-  transition: transform .8s;
+  transition: transform .6s;
   width: auto;
 }

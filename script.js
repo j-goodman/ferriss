@@ -34,14 +34,12 @@ var setupSwitches = function (slides) {
     if (document.currentSlide > 0) {
       changeSlide(-1, slides);
     }
-
   };
 
   down.onclick = function () {
     if (document.currentSlide < slides.length - 1) {
       changeSlide(1, slides);
     }
-
   };
 };
 
@@ -53,7 +51,7 @@ var changeSlide = function (direction, slides) {
 
   setTimeout(function () {
     this.className = '';
-  }.bind(slideContainer), 600);
+  }.bind(slideContainer), 400);
 
   document.currentSlide += direction;
   updateSlides(slides, document.currentSlide);
