@@ -56,3 +56,14 @@ var changeSlide = function (direction, slides) {
   document.currentSlide += direction;
   updateSlides(slides, document.currentSlide);
 };
+
+onkeydown = function (event) {
+  switch (event.keyCode) {
+    case 38:
+      document.getElementById('up').onclick();
+      break;
+    case 40:
+      document.getElementById('down').onclick();
+      break;
+  }
+};
